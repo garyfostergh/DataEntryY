@@ -1,0 +1,36 @@
+<h2>
+  New User
+</h2>
+
+<form #f="ngForm">
+  <md-card>
+    <label>Name</label>
+    <input [ngModel]="name.first" name="First" placeholder="First Name">
+    <input [ngModel]="name.last" name="Last" placeholder="Last Name">
+    <div>
+      <input ngModel type="text" name="username" placeholder="User Name">
+      <input ngModel type="password" name="password" placeholder="Password">
+      <input ngModel type="password2" name="confirm" placeholder="Confirm">
+
+    </div>
+    <label>Would like us to send spam</label>
+    <input ngModel type="radio" value="yes" name="thisQuestion">Yes
+    <input ngModel type="radio" value="no" name="thisQuestion">No
+
+    <label>Can we wear hats?</label>
+    <md-radio-group ngModel name="no-hats">
+      <md-radio-button value="yes">Yes</md-radio-button>
+      <md-radio-button value="no">No</md-radio-button>
+    </md-radio-group>
+  </md-card>
+</form>
+
+<br><br>
+
+<md-card>
+  <p>Data: {{ f.value | json }}</p>
+
+
+
+
+</md-card>

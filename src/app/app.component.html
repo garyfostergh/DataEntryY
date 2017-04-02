@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>
+  <h3>
+    <a class="SiteTitle" routerLink="welcome">{{title}} </a>
+  </h3>
+  <button md-button routerLink="account/new">New Account</button>
+  <button md-button routerLink="account/new-reactive">New Reactive Account</button>
+</md-toolbar>
+<router-outlet> </router-outlet>
